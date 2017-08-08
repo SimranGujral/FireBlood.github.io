@@ -9,7 +9,7 @@ knitr::opts_chunk$set(out.width="750px", dpi=300)
 
 Data and [R](https://www.r-project.org/) code for the analysis supporting this [August 7, 2017 BuzzFeed News post](https://www.buzzfeed.com/peteraldhous/hidden-spy-planes) on identifying potential surveillance aircraft. Supporting files are in [this GitHub repository](https://github.com/BuzzFeedNews/2017-08-spy-plane-finder).
 
-##Background and Motivation
+## Background and Motivation
 
 Servo, Mozilla's parallel browser engine is written in Rust. Servo aims to create a browser which is memory safe and fast, 
 the next generation browser.Before I get to what this post is about, I think its worthwhile to explain the jargon surrounding 

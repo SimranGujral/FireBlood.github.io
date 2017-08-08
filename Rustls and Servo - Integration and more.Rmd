@@ -19,11 +19,15 @@ not malicious. This is basically the SSL/TLS protocol.
 Every browser has its own version of the TLS protocol. As of today, Chrome uses BoringSSL, Safari uses LibreSSL, FireFox uses NSS 
 and Servo (our subject for this project) uses Rust-OpenSSL. 
 Now, as I mentioned earlier, Servo is the supposed to be next generation browser which is written in Rust- which is inherently type 
-safe and memory safe. However, its TLS stack is Rust-OpenSSL, which is basically Rust bindings for OpenSSL which is written in C and Assembly. One of the discussions in the Servo community has been to move to Rust Based crypto primitives and to modernize its TLS stack.
+safe and memory safe. However, its TLS stack is Rust-OpenSSL, which is basically Rust bindings for OpenSSL which is written in C 
+and Assembly. One of the discussions in the Servo community has been to move to Rust Based crypto primitives and to modernize its 
+TLS stack.
 When we say modernize, what do we mean? 
-Well, there were a couple of things we had in mind, one was to make the certificate verification process parallel, to use a certificate verification library based on Rust based Crypto primitives, to make the TLS stack much leaner (in essence this meant removing features which we did not need in a browser today. Over the years, the OpenSSL TLS stack has developed with the browser. During this process, a lot of things have come into existence and a lot of things have become obsolete. Hence, it makes sense to clean what we did not need anymore.) .
+Well, there were a couple of things we had in mind, one was to make the certificate verification process parallel, to use a certificate verification library based on Rust based Crypto primitives, to make the TLS stack much leaner (in essence this meant removing features which we did not need in a browser today. Over the years, the OpenSSL TLS stack has developed with the browser. During this process, a 
+lot of things have come into existence and a lot of things have become obsolete. Hence, it makes sense to clean what we did not need anymore.) .
 
 FAQs:
+
 1) Why doesn't Servo use NSS?
 
 A: There are no Rust Bindings for NSS. There exist Rust Bindings for OpenSSL. Hence, we use that.

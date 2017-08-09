@@ -41,7 +41,7 @@ Rustls is the TLS stack written in Rust which uses WebPKI for certificate verifi
 Hence, it goes like this :
 
 Rustls --> WebPKI --> Ring --> BoringSSL
-<img src="https://computerrelatedsolutions.files.wordpress.com/2014/11/firefox_logo-wordmark-horiz_rgb.png"></img>
+<img src="https://github.com/SimranGujral/FireBlood.github.io/blob/master/RustlsDependencyChart.png"></img>
 
 
 

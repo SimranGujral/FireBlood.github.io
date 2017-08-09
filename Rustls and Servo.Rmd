@@ -45,9 +45,13 @@ Hence, it goes like this :
 Rustls --> WebPKI --> Ring --> BoringSSL
 
 So, this is how all the pieces of the puzzle fit together, and now we have to fit them into Servo.
+
 However, when you set out to make a browser which is blazingly fast, you need to make sure that any piece you fit in does not slow it down.
+
 Also, when your primary concern for your blazingly fast browser is security, you want to make sure the cryptographic protocols in the new 
-version of the TLS stack that you use work correctly. Also, since you want to move to a leaner version, you want to try to make sure that  the stack supports most of the features that the web depends on. 
+version of the TLS stack that you use work correctly. 
+
+Lastly, since you want to move to a leaner version, you want to try to make sure that  the stack supports most of the features that the web depends on. 
 
 
 

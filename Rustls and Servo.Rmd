@@ -79,6 +79,34 @@ There were two things we did to handle our concerns:
 1) Feature Comparison between RusTLS and Rust-OpenSSL
 2) Performance Comparison between RusTLS and Rust-OpenSSL
 
+## Feature Comparison
+
+This was important to handle concerns 1 and 2 and was done using the BoringSSL test suite. The BoringSSL test suite is basically a suite of unit tests which was designed for BoringSSL and can be used to check TLS implementations.
+There is already a shim to test the TLS implementation for RusTLS.
+It can be found here:
+
+<a href="https://github.com/ctz/rustls/tree/master/examples/internal">RusTLS BoGo Shim</a>
+
+I worked on a TLS implementation for Rust-OpenSSL to understand the difference in libraries and features between the two TLS implementations and tested this against the BoringSSL test suite.
+The shim does not currently support all features tested by the BoringSSL test suite.
+It does not pass all the tests posed by the BoringSSL test suite. However, this is not because the library is incorrect, its because the BoringSSL test suite was designed was BoringSSL and we are testing it on Rust-OpenSSL. The errors reported by Rust-OpenSSL are different in wording than the ones expected by the suite and this leads to failures inspite of the shim behaving correctly.
+Currently the shim passes 245 tests and fails 251. 
+This is still a work in progress.
+However, this implementation greatly helped me in understanding the differences in the two libraries.
+
+
+As I mentioned earlier, RusTLS already has a TLS implementation to be tested against the suite. RusTLS passes all tests it is being tested against in the BoringSSL test suite. A major point of concern which emerged for us during these tests was that RusTLS does not support TLS v 1.1. It also does not support DHE and SHA1 which Servo was using, but wanted to remove this dependency as per this issue:
+
+https://github.com/servo/servo/issues/8581
+
+https://github.com/servo/servo/pull/16535
+
+
+
+
+
+
+
 
 
 

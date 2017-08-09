@@ -24,6 +24,7 @@ and Assembly. One of the discussions in the Servo community has been to move to 
 TLS stack.
 
 When we say <b>modernize</b>, what do we mean? 
+
 Well, there were a couple of things we had in mind, one was to make the certificate verification process parallel, to use a certificate verification library based on Rust based Crypto primitives, to make the TLS stack much leaner (in essence this meant removing features which we did not need in a browser today. Over the years, the OpenSSL TLS stack has developed with the browser. During this process, a 
 lot of things have come into existence and a lot of things have become obsolete. Hence, it makes sense to clean what we did not need anymore.).
 
@@ -44,6 +45,7 @@ Hence, it goes like this :
 
 Rustls --> WebPKI --> Ring --> BoringSSL
 
+## Concerns
 So, this is how all the pieces of the puzzle fit together, and now we have to fit them into Servo.
 
 However, when you set out to make a browser which is blazingly fast, you need to make sure that any piece you fit in does not slow it down.
@@ -53,6 +55,13 @@ version of the TLS stack that you use work correctly.
 
 Lastly, since you want to move to a leaner version, you want to try to make sure that  the stack supports most of the features that the web depends on. 
 
+Hence, we come down to our three main concerns pre - integration:
+
+1) Does Rustls support the most important and most of the features that the web needs and depends on?
+
+2) Do these features work without glitches?
+
+3) Is it fast enough, if not faster?
 
 
 

@@ -33,7 +33,14 @@ It had the absolute necessary features which Google required for their use.
 #### Ring
 Ring is a fork of BoringSSL which was written in Rust. It is a set of rust cryptographic primitives which are based of BoringSSL.
 #### WebPKI
-WebPKI is a certificate verification library which works on Ring. It uses rings cryptographic primitives for certificate verficiation.
+WebPKI is a certificate verification library which works on Ring. It uses rings cryptographic primitives for certificate verification.
+#### Rustls
+Rustls is the TLS stack written in Rust which uses WebPKI for certificate verification. 
+
+Hence, it goes like this :
+
+Rustls --> WebPKI --> Ring --> BoringSSL
+
 
 
 FAQs:

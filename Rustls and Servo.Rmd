@@ -75,7 +75,11 @@ Hence, we come down to our three main concerns pre-integration:
 
 ## Pre-Integration
 
-There were two things
+There were two things we did to handle our concerns:
+1) Feature Comparison between RusTLS and Rust-OpenSSL
+2) Performance Comparison between RusTLS and Rust-OpenSSL
+
+
 
 
 

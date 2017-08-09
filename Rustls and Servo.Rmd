@@ -50,7 +50,7 @@ For more Information:
 
 <li><a href="https://github.com/briansmith/ring">Ring</a></li>
 
-<li>a href="https://github.com/ctz/rustls">RusTLS</a></li>
+<li><a href="https://github.com/ctz/rustls">RusTLS</a></li>
 
 
 </ul>

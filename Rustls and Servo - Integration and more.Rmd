@@ -24,7 +24,17 @@ and Assembly. One of the discussions in the Servo community has been to move to 
 TLS stack.
 When we say modernize, what do we mean? 
 Well, there were a couple of things we had in mind, one was to make the certificate verification process parallel, to use a certificate verification library based on Rust based Crypto primitives, to make the TLS stack much leaner (in essence this meant removing features which we did not need in a browser today. Over the years, the OpenSSL TLS stack has developed with the browser. During this process, a 
-lot of things have come into existence and a lot of things have become obsolete. Hence, it makes sense to clean what we did not need anymore.) .
+lot of things have come into existence and a lot of things have become obsolete. Hence, it makes sense to clean what we did not need anymore.).
+
+## Concepts
+#### BoringSSL
+BoringSSL is Google's fork of OpenSSL and was created in response to the Heartbleed bug found in OpenSSL.
+It had the absolute necessary features which Google required for their use.
+#### Ring
+Ring is a fork of BoringSSL which was written in Rust. It is a set of rust cryptographic primitives which are based of BoringSSL.
+#### WebPKI
+WebPKI is a certificate verification library which works on Ring. It uses rings cryptographic primitives for certificate verficiation.
+
 
 FAQs:
 

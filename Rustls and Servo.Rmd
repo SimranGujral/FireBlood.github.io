@@ -40,7 +40,7 @@ Hence, it goes like this :
 
 <img src="https://github.com/SimranGujral/FireBlood.github.io/blob/master/RustlsDependencyChart.png"></img>
 
-Rustls --> WebPKI --> Ring --> BoringSSL
+<b>Figure 1 : </b>Rustls --> WebPKI --> Ring --> BoringSSL
 
 For more Information:
 <ul>

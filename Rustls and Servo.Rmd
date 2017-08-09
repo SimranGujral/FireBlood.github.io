@@ -43,10 +43,11 @@ Hence, it goes like this :
 Rustls --> WebPKI --> Ring --> BoringSSL
 
 For more Information:
+<ul>
+<li><a href="https://boringssl.googlesource.com/boringssl/">BoringSSL</a></li>
 
-<a href="https://boringssl.googlesource.com/boringssl/">BoringSSL</a>
-
-<a href="https://github.com/briansmith/ring">Ring</a>
+<li><a href="https://github.com/briansmith/ring">Ring</a></li>
+</ul>
 
 ## Concerns
 So, this is how all the pieces of the puzzle fit together, and now we have to fit them into Servo.

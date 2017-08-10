@@ -106,7 +106,18 @@ https://github.com/servo/servo/pull/16535
 
 ## Performance Comparison
 
-For the performance comparison, I created a benchmarking framework for Hyper-Rustls
+For the performance comparison, I created a benchmarking framework for Hyper-Rustls and Rust-OpenSSL which measured timings for every step of the handshake. Results showed that a major portion of the time before establishing a connection goes in configuring and creating a connector, certificate verification takes lesser time. This was one of the reasons for not pursuing parallel certificate verification, since the overhead was not much.
+
+The framework was tested on 101 websites of the Alexa 500.
+
+Results were obtained by aggregating it over 10 clean connections without caching.
+
+###### Results for performance comparison
+
+Results for performance comparison are as follows:
+1) RustOpenSSL is
+
+
 
 
 

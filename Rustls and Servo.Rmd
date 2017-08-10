@@ -136,6 +136,42 @@ The Benchmarking implementation can be found here:
 
 <a href="https://github.com/SimranGujral/hyper-openssl/blob/benchmarks/examples/alexa_bench.rs">Benchmarking Implementation</a>
 
+The implementation uses the exact config parameters that Servo uses.
+(Config Parameters here refer to the certificates used for verification, and the ciphers used in servo.
+159 certificates were used for benchmarking.)
+
+
+## Hyper-Rustls integration with Servo
+
+The results show a minor improvement in performance with Hyper-Rustls. Though the performance improvement is probably a nano second, it is is indicative of a lot of things.
+
+Firstly, it means that we do not have a performance regression. 
+This point is important because it means we can move to a Rust Based solution without a performance regression. It means that we can usew the rust crypto primitives in Ring without slowing down the process of verification
+
+Secondly, it is important to note here that we performed this benchmarking with Hyper-Rustls v 0.10. This is because Servo's network currently uses an older version of Hyper. Hence, if the current version is bumped and the new version of Hyper- Rustls is used, improvements are possible.
+
+We have successfully integrated Hyper-Rustls with Servo. The PR for this can be found here:
+
+
+PR for Hyper-Rustls integration in Servo.
+
+
+<a href="https://github.com/servo/servo/pull/17938">PR for Hyper-Rustls integration with Servo</a>
+
+
+There are a few caveats with this integration though. These are the primary reasons behind it not being merged as of yet.
+We are working on these issues as of today:
+
+
+1) The integration works for WPT's but does not work for Android. We need to check on that
+
+2) For the integration to pass, we need to change a few tests which depend on Hyper Rust-OpenSSL
+
+
+
+
+
+
 
 
 

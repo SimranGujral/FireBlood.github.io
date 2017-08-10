@@ -128,6 +128,10 @@ Rustls was always faster for certificate verification.
 
 Rustls was faster for 90 out of 101 websites for establishing the complete connection.
 
+The complete results can be found here:
+
+<a href="https://github.com/SimranGujral/FireBlood.github.io/blob/master/Alexa_500Results.xlsx">Hyper-Rustls vs Rust-OpenSSL Benchmarking results </a>
+
 
 
 

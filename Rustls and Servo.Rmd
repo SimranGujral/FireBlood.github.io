@@ -114,8 +114,20 @@ Results were obtained by aggregating it over 10 clean connections without cachin
 
 ###### Results for performance comparison
 
-Results for performance comparison are as follows:
-1) RustOpenSSL is
+As mentioned earlier, we tested three things:
+
+1) Time to create a connector
+
+2) Time to perform certificate verification
+
+3) Time to establish the complete connection (This is step 1+ step 2 + other steps which happen in the handshake)
+
+Results showed that Rust-OpenSSL is almost always faster for creating a connector.
+
+Rustls was always faster for certificate verification.
+
+Rustls was faster for 90 out of 101 websites for establishing the complete connection.
+
 
 
 

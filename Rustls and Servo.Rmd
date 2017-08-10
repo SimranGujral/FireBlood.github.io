@@ -152,10 +152,6 @@ Secondly, it is important to note here that we performed this benchmarking with 
 
 We have successfully integrated Hyper-Rustls with Servo. The PR for this can be found here:
 
-
-PR for Hyper-Rustls integration in Servo.
-
-
 <a href="https://github.com/servo/servo/pull/17938">PR for Hyper-Rustls integration with Servo</a>
 
 
@@ -166,6 +162,16 @@ We are working on these issues as of today:
 1) The integration works for WPT's but does not work for Android. We need to check on that
 
 2) For the integration to pass, we need to change a few tests which depend on Hyper Rust-OpenSSL
+
+## Future Work
+
+Apart from correcting the issues with the android implementation and modifying the tests to make it relevant to Hyper-Rustls, we have a few things to check for:
+
+1) Though Rustls passes the tests for the BoringSSL test suite, we should still check for security implications if any for it.
+
+2) While comparing the performance of Hyper-Rustls and Rustls, we found that Hyper-Rustls was faster. Since Hyper-Rustls is just Hyper using Rustls, it is interesting to see why it is faster.
+
+3) According to benchmarking results, there are 11 websites for which Rust-OpenSSL is faster in establishing a connection, it would be interesting to see the characteristics of the websites which connect faster using Rust-OpenSSL.
 
 
 

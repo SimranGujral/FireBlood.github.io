@@ -186,7 +186,7 @@ A: There are no Rust Bindings for NSS. There exist Rust Bindings for OpenSSL. He
 
 A: We performed a cipherscan. The results of which can be found here:
 
-<a href="https://avadacatavra.github.io/servo/2016/10/10/cipherscan.html">Cipher Scan results/a>
+<a href="https://avadacatavra.github.io/servo/2016/10/10/cipherscan.html">Cipher Scan results</a>
 
 As we see, only 1% of the websites depend on TLS 1.1. 5 % of the websites depend on TLS 1.0. Support for TLS 1.0 is a cause for concern for us. 
 

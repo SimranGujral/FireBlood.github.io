@@ -132,6 +132,10 @@ The complete results can be found here:
 
 <a href="https://github.com/SimranGujral/FireBlood.github.io/blob/master/Alexa_500Results.xlsx">Hyper-Rustls vs Rust-OpenSSL Benchmarking results </a>
 
+The Benchmarking implementation can be found here:
+
+<a href="https://github.com/SimranGujral/hyper-openssl/blob/benchmarks/examples/alexa_bench.rs">Benchmarking Implementation</a>
+
 
 
 

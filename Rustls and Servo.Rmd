@@ -35,6 +35,8 @@ Ring is a fork of BoringSSL which was written in Rust. It is a set of rust crypt
 WebPKI is a certificate verification library which works on Ring. It uses rings cryptographic primitives for certificate verification.
 #### Rustls
 Rustls is the TLS stack written in Rust which uses WebPKI for certificate verification. 
+#### Hyper-Rustls
+Hyper is a networking library. As Hyper-Rustls it uses Rustls to make its connections secure. Hyper-Rustls works as a connection between Hyper- a networking library and Rustls - a TLS implementations to make network connections secure.
 
 Hence, it goes like this :
 
@@ -95,12 +97,16 @@ This is still a work in progress.
 However, this implementation greatly helped me in understanding the differences in the two libraries.
 
 
-As I mentioned earlier, RusTLS already has a TLS implementation to be tested against the suite. RusTLS passes all tests it is being tested against in the BoringSSL test suite. A major point of concern which emerged for us during these tests was that RusTLS does not support TLS v 1.1. It also does not support DHE and SHA1 which Servo was using, but wanted to remove this dependency as per this issue:
+As I mentioned earlier, RusTLS already has a TLS implementation to be tested against the suite. RusTLS passes all tests it is being tested against in the BoringSSL test suite. A major point of concern which emerged for us during these tests was that RusTLS does not support TLS v 1.0 and TLS v 1.1. It also does not support DHE and SHA1 which Servo was using, but wanted to remove this dependency as per this issue:
 
 https://github.com/servo/servo/issues/8581
 
 https://github.com/servo/servo/pull/16535
 
+
+## Performance Comparison
+
+For the performance comparison, I created a benchmarking framework for Hyper-Rustls
 
 
 

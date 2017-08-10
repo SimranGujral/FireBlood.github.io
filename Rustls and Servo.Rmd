@@ -36,7 +36,7 @@ WebPKI is a certificate verification library which works on Ring. It uses rings 
 #### Rustls
 Rustls is the TLS stack written in Rust which uses WebPKI for certificate verification. 
 #### Hyper-Rustls
-Hyper is a networking library. As Hyper-Rustls it uses Rustls to make its connections secure. Hyper-Rustls works as a connection between Hyper- a networking library and Rustls - a TLS implementations to make network connections secure.
+Hyper is a networking library. As Hyper-Rustls it uses Rustls to make its connections secure. Hyper-Rustls works as a connection between Hyper- a networking library and Rustls - a TLS implementation to make network connections secure.
 
 Hence, it goes like this :
 
@@ -54,7 +54,7 @@ For more Information:
 
 <li><a href="https://github.com/ctz/rustls">RusTLS</a></li>
 
-
+<li><a href="https://github.com/ctz/hyper-rustls">Hyper-RusTLS</a></li>
 </ul>
 
 ## Concerns

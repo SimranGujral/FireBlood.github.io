@@ -173,33 +173,25 @@ Apart from correcting the issues with the android implementation and modifying t
 
 3) According to benchmarking results, there are 11 websites for which Rust-OpenSSL is faster in establishing a connection, it would be interesting to see the characteristics of the websites which connect faster using Rust-OpenSSL.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 FAQs:
+
+Though I hope that the post above answers all questions, I know of a few which I have faced while explaining this project which are not answered above.
+If these do not answer your questions, please leave a note and I will try to answer it to the best of my capabilities.
 
 1) Why doesn't Servo use NSS?
 
 A: There are no Rust Bindings for NSS. There exist Rust Bindings for OpenSSL. Hence, we use that.
+
+2) Rustls does not support TLS 1.1 and TLS 1.0? Is that a point of concern?
+
+A: We performed a cipherscan. The results of which can be found here:
+
+<a href="https://avadacatavra.github.io/servo/2016/10/10/cipherscan.html">Cipher Scan results/a>
+
+As we see, only 1% of the websites depend on TLS 1.1. 5 % of the websites depend on TLS 1.0. Support for TLS 1.0 is a cause for concern for us. 
+
+Cipher scans can be performed using this tool:
+
+<a href="https://github.com/mozilla/cipherscan">Cipher Scan</a>
+
 

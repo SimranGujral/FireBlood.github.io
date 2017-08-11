@@ -79,7 +79,7 @@ However, this implementation greatly helped me in understanding the differences 
 
 As I mentioned earlier, RusTLS already has a TLS implementation to be tested against the suite. RusTLS passes all tests it is being tested against in the BoringSSL test suite. A major point of concern which emerged for us during these tests was that RusTLS does not support TLS v 1.0 and TLS v 1.1. It also does not support DHE and SHA1 which Servo was using, but wants to remove this dependency as per this issue:
 
-<a href="hhttps://github.com/servo/servo/issues/8581">https://github.com/servo/servo/issues/8581 </a>
+<a href="https://github.com/servo/servo/issues/8581">https://github.com/servo/servo/issues/8581 </a>
 
 <a href="https://github.com/servo/servo/pull/16535">https://github.com/servo/servo/pull/16535 </a>
 

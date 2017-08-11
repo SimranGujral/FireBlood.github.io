@@ -21,7 +21,7 @@ Hyper is a networking library. Hyper-Rustls uses Rustls to make its connections 
 Hence, it goes like this :
 
 <img src="https://github.com/SimranGujral/FireBlood.github.io/blob/master/RustlsDependencyChart.png"></img>
-
+![Rustls Dependencies](https://github.com/SimranGujral/FireBlood.github.io/blob/master/RustlsDependencyChart.png)
 <b>Figure 1 : </b>Rustls --> WebPKI --> Ring --> BoringSSL
 
 For more Information:
@@ -176,5 +176,5 @@ Cipher scans can be performed using this tool:
 
 <a href="https://github.com/mozilla/cipherscan">Cipher Scan</a>
 
-* in essence this meant removing features which we did not need in a browser today. Over the years, the OpenSSL TLS stack has developed with the browser. During this process, a lot of things have come into existence and a lot of things have become obsolete. Hence, it makes sense to clean what we did not need anymore.
+*In essence this meant removing features which we did not need in a browser today. Over the years, the OpenSSL TLS stack has developed with the browser. During this process, a lot of things have come into existence and a lot of things have become obsolete. Hence, it makes sense to clean what we did not need anymore.
 

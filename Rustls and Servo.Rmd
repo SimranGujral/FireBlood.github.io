@@ -1,7 +1,3 @@
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(out.width="750px", dpi=300)
-```
-
 # Rustls and Servo
 
 ## Background and Motivation

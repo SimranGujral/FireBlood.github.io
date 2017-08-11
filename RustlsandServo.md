@@ -92,7 +92,7 @@ The framework was tested on 101 websites of the Alexa 500.
 
 Results were obtained by aggregating it over 10 clean connections without caching.
 
-###### Results for performance comparison
+#### Results for performance comparison
 
 As mentioned earlier, we tested three things:
 

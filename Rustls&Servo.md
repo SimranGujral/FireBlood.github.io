@@ -20,7 +20,7 @@ Hyper is a networking library. Hyper-Rustls uses Rustls to make its connections 
 
 Hence, it goes like this :
 
-<b>Figure 1 : </b>Rustls --> WebPKI --> Ring --> BoringSSL
+Rustls --> WebPKI --> Ring --> BoringSSL
 
 For more Information:
 <ul>

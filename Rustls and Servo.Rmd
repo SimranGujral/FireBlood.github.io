@@ -1,11 +1,9 @@
----
-title: "Modernizing the TLS stack on Servo"
-output: html_document
----
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(out.width="750px", dpi=300)
 ```
+
+# Rustls and Servo
+
 ## Background and Motivation
 
 Servo, Mozilla's parallel browser engine is written in Rust. Servo aims to create a browser which is memory safe and fast, 

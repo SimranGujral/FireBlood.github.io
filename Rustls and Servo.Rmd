@@ -171,7 +171,7 @@ Apart from correcting the issues with the android implementation and modifying t
 
 3) According to benchmarking results, there are 11 websites for which Rust-OpenSSL is faster in establishing a connection, it would be interesting to see the characteristics of the websites which connect faster using Rust-OpenSSL.
 
-FAQs:
+## FAQs:
 
 Though I hope that the post above answers all questions, I know of a few which I have faced while explaining this project which are not answered above.
 If these do not answer your questions, please leave a note and I will try to answer it to the best of my capabilities.
